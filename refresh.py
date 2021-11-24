@@ -37,5 +37,4 @@ while True:
     end_position = mouse.position
 
     if start_position != end_position:
-        input("Press any key to continue ")
-
+        break
