@@ -16,22 +16,25 @@ def enter_toggle():
     key.press(Key.enter)
     key.release(Key.enter)
 
+x = 1
+xx = 5
 
 input("Press any key to start:")
-time.sleep(5)
+while xx > 0:
+    print("Starting in " + str(xx) + " seconds")
+    xx -= 1
+    time.sleep(1)
 while True:
 
     start_position = mouse.position
 
+    print("Cycle " + str(x))
     key.press(Key.ctrl_l)
-    print("Ctrl pressed")
     f1_toggle()
-    print("F1 toggled")
     key.release(Key.ctrl_l)
-    print("Ctrl released")
     time.sleep(1)
     enter_toggle()
-    print("Enter toggled")
+    x += 1
     time.sleep(.5)
 
     end_position = mouse.position
